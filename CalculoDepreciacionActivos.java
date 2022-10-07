@@ -41,6 +41,7 @@ public class CalculoDepreciacionActivos {
 						
 						double depAnual = (costoActivo-valorDesecho)/vidaUtil;
 						System.out.println("La depreciacion anual es: " + depAnual);
+						System.out.println("La depresiacion acumiada es: " + (depAnual * vidaUtil));
 						break;
 					case 2:
 						
