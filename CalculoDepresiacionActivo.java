@@ -13,7 +13,7 @@ public class CalculoDepresiacionActivo {
 		double colectivoCarga = 20,otros=12.5,cuotaAmortizacion;
 		double fijaBienInmovil = 10,noAdheridoPerma=15,otrosMaqEquipo=20,equiEmpresaAgro=20,agricolas=20;
 		double mobiliarioEquiOficina=20,equipoComunicacion=20,ascensoresUnidadesAcondicionado=10,noComprendidos=20;
-		double dep[] = new double[vidaUtil];
+
 		double costoActivo,valorDesecho;
 		String name = "";
 		
@@ -790,6 +790,59 @@ public class CalculoDepresiacionActivo {
 						break;
 					case 2:
 
+						System.out.println(name + " Ha elegido Metodo de unidades Producidas");
+						System.out.print("Escriba el costo del activo: ");
+						costoActivo = en.nextDouble();
+						System.out.print("Escriba el valor de desecho: ");
+						valorDesecho = en.nextDouble();
+						System.out.print("Escriba la vida util: ");
+						vidaUtil = en.nextInt();
+						
+				
+						double dep[] = new double[vidaUtil];
+						double aukm =0,km=0;
+								double detDeAnual=0;
+								double anioda=0;
+						for (int i = 0; i < vidaUtil; i++) {
+							System.out.print("kms recorridos en el anio " + (i+1) + ": ");
+							 dep[i] = en.nextDouble();
+
+							 aukm = aukm + dep[i];
+								
+
+							 
+						}
+System.out.println("----------------------------");
+for (int i = 0; i < vidaUtil; i++) {
+	depAnual = (costoActivo-valorDesecho)/aukm;
+	 double result = dep[i] * depAnual;
+	 System.out.println(result);
+}
+System.out.println("----------------------------");
+System.out.println("total recorrido: "+ aukm);
+System.out.println("-----------------------");
+System.out.println("Depreciacion Acumulada");
+System.out.println("-----------------------");
+double suma=0
+for (int i = 1; i <= vidaUtil; i++) {
+
+	 suma = suma+depAnual;
+	System.out.println((suma));
+}
+System.out.println("Fin Depreciacion Acumulada");
+System.out.println("-----------------------");
+System.out.println("Valor en libros");
+System.out.println("-----------------------");
+double libro =0;
+System.out.println(costoActivo);
+for (int i = 0; i < vidaUtil; i++) {
+	 libro = (costoActivo-dep[i]);
+	 costoActivo = libro;
+	System.out.println(costoActivo);
+}
+System.out.println("Fin Valor en libros");
+
+						
 						break;
 					case 3:
 						
