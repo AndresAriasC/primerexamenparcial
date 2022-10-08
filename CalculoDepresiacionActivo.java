@@ -820,27 +820,6 @@ for (int i = 0; i < vidaUtil; i++) {
 }
 System.out.println("----------------------------");
 System.out.println("total recorrido: "+ aukm);
-System.out.println("-----------------------");
-System.out.println("Depreciacion Acumulada");
-System.out.println("-----------------------");
-double suma=0
-for (int i = 1; i <= vidaUtil; i++) {
-
-	 suma = suma+depAnual;
-	System.out.println((suma));
-}
-System.out.println("Fin Depreciacion Acumulada");
-System.out.println("-----------------------");
-System.out.println("Valor en libros");
-System.out.println("-----------------------");
-double libro =0;
-System.out.println(costoActivo);
-for (int i = 0; i < vidaUtil; i++) {
-	 libro = (costoActivo-dep[i]);
-	 costoActivo = libro;
-	System.out.println(costoActivo);
-}
-System.out.println("Fin Valor en libros");
 
 						
 						break;
