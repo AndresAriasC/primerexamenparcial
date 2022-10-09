@@ -863,6 +863,15 @@ public class CalculoDepresiacionActivo {
 							}while(vidaUtil < 0);
 							
 						}
+						System.out.println("Valor en libros------------------");
+						System.out.println(costoActivo);
+						for (int i = 0; i < vidaUtil; i++) {
+							do {
+								System.out.println(costoActivo -((costoActivo-valorDesecho)*((vidaUtil-i)/denominador)));
+								break;
+							}while(vidaUtil < 0);
+							
+						}
 						
 						
 						
