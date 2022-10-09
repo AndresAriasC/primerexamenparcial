@@ -23,7 +23,7 @@ public class CalculoDepresiacionActivo {
 		System.out.println("---------------------------------------------------------");
 
 		do {
-			
+			//Andres
 			System.out.println("---------------- Bienvenido " + name + "----------------------- \n");
 			System.out.println("Elige un metodo por el cual deseas trabajar ------------- \n");
 			System.out.println("1) Metodo de linea recta");
