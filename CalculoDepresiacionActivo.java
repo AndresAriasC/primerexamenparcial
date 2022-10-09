@@ -8,7 +8,7 @@ public class CalculoDepresiacionActivo {
 		
 		Scanner en = new Scanner(System.in);
 		//se declaran todas las variables a utilizar
-		int op,tipoBienADepreciar, vidaUtil=0,cont=0;
+		int op,tipoBienADepreciar,cont=0, vidaUtil=0;
 		double industriales=10,comerciales=5,depAnual,residenciaPropietario=10,instalacionFAgropecuarias=20,edificiosAlquiler=1;
 		double colectivoCarga = 20,otros=12.5,cuotaAmortizacion;
 		double fijaBienInmovil = 10,noAdheridoPerma=15,otrosMaqEquipo=20,equiEmpresaAgro=20,agricolas=20;
@@ -812,23 +812,59 @@ public class CalculoDepresiacionActivo {
 
 							 
 						}
-System.out.println("----------------------------");
-for (int i = 0; i < vidaUtil; i++) {
-	depAnual = (costoActivo-valorDesecho)/aukm;
-	 double result = dep[i] * depAnual;
-	 System.out.println(result);
-}
-System.out.println("----------------------------");
-System.out.println("total recorrido: "+ aukm);
+						System.out.println("----------------------------");
+						for (int i = 0; i < vidaUtil; i++) {
+							depAnual = (costoActivo-valorDesecho)/aukm;
+							 double result = dep[i] * depAnual;
+							 System.out.println(result);
+						}
+						System.out.println("----------------------------");
+						System.out.println("total recorrido: "+ aukm);
 
 						
 						break;
 					case 3:
 						
-						
 						break;
 					case 4:
 
+						System.out.println(name + ", Ha elegido Metodo de suma de los digitos de los anios");
+						do {
+							System.out.print("Escriba el costo del activo: ");
+							costoActivo = en.nextDouble();
+						}while(costoActivo < 1);
+						do {
+							System.out.print("Escriba el valor de desecho: ");
+							valorDesecho = en.nextDouble();
+						}while(valorDesecho < 1);
+						do {
+							System.out.print("Escriba la vida util: ");
+							vidaUtil = en.nextInt();
+						}while(vidaUtil < 1 || vidaUtil > 200);
+						
+						double suma=0,denominador=0;
+						denominador = (vidaUtil*(1+vidaUtil)/2);
+						
+						System.out.println(denominador);
+						System.out.println("Valores en fracciones------------------");
+						for (int i = 0; i < 8; i++) {
+							System.out.println("Fraccion: "+(i+1)+ " " + vidaUtil/denominador);
+							vidaUtil--;
+						}
+						
+						
+						
+						
+						
+					//	depAnual = (((costoActivo-valorDesecho)*vidaUtil)/suma);
+						
+					//	System.out.println("El costo del activo es: " + costoActivo);
+					//	System.out.println("El valor de desecho es: " + valorDesecho);
+					//	System.out.println("La depreciacion ANUAL es: " + depAnual);
+						
+						
+						
+						
 						
 						break;
 					}
