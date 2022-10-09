@@ -847,9 +847,12 @@ public class CalculoDepresiacionActivo {
 						
 						System.out.println(denominador);
 						System.out.println("Valores en fracciones------------------");
-						for (int i = 0; i < 8; i++) {
-							System.out.println("Fraccion: "+(i+1)+ " " + vidaUtil/denominador);
-							vidaUtil--;
+						for (int i = 0; i < vidaUtil; i++) {
+							do {
+								System.out.println("Fraccion: "+(i+1)+ " " + ((vidaUtil-i)/denominador));
+								break;
+							}while(vidaUtil < 0);
+							
 						}
 						
 						
