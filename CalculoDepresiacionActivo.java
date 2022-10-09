@@ -849,7 +849,16 @@ public class CalculoDepresiacionActivo {
 						System.out.println("Valores en fracciones------------------");
 						for (int i = 0; i < vidaUtil; i++) {
 							do {
-								System.out.println("Fraccion: "+(i+1)+ " " + ((vidaUtil-i)/denominador));
+								System.out.println("Fraccion: "+(i+1)+ ") " + ((vidaUtil-i)/denominador));
+								break;
+							}while(vidaUtil < 0);
+							
+						}
+						
+						System.out.println("Depreciacion------------------");
+						for (int i = 0; i < vidaUtil; i++) {
+							do {
+								System.out.println("Depreciacion: "+(i+1)+ ") " + (costoActivo-valorDesecho)*((vidaUtil-i)/denominador));
 								break;
 							}while(vidaUtil < 0);
 							
